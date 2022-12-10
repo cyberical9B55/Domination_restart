@@ -113,7 +113,13 @@ local lockers = {
 		"BornWithBear",
 		"285002123",
 		"caught with aim viewer, went blatant after"
+	},
+	["25"] = {
+		"dxrkstatic",
+		"2240243711",
+		"caught with aim viewer, bro said his roshade glitched"
 	}
+
 
 }
 
@@ -185,7 +191,7 @@ Players.PlayerAdded:Connect(function(player)
 			Notify(k[1].." Just joined!", k[3])
 		end
 	end
-	for j, k in pairs( fisxuser) do
+	for j, k in pairs(fisxuser) do
 		if player.UserId == k then
 			local CoreGui = game:GetService("StarterGui")
 			CoreGui:SetCore("SendNotification", {
@@ -202,8 +208,8 @@ Players.PlayerRemoving:Connect(function(player)
 			Notify(k[1].." Just left!", "BYEE")
 		end
 	end
-	for j, k in pairs( fisxuser) do
-		if v.UserId == k then
+	for j, k in pairs(fisxuser) do
+		if player.UserId == k then
 			local CoreGui = game:GetService("StarterGui")
 			CoreGui:SetCore("SendNotification", {
 				Title = "Old 15x user (Left)";
