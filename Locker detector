@@ -1,0 +1,215 @@
+local lockers = {
+	["1"] = {
+		"mydingydonxgLong",
+		"3334781621",
+		"Blatant lol"
+	},
+	["2"] = {
+		"24kfrostyy",
+		"1910824297",
+		"Blatant lol"
+	},
+	["3"] = {
+		"hezaybladi",
+		"3483167398",
+		"Blatant lol, plays legit somtimes/ass sets"
+	},
+	["4"] = {
+		"RCQhatez",
+		"2955692010",
+		"Blatant lol, plays legit somtimes/ass sets"
+	},
+	["5"] = {
+		"Tarzwrap",
+		"3164319854",
+		"Blatant lol, plays legit somtimes/ass sets"
+	},
+	["6"] = {
+		"nickbossff56",
+		"580782839",
+		"Wasnt too blatant, shot down against Under aa"
+	},
+	["7"] = {
+		"Kcxrma8",
+		"3431203077",
+		"Wasnt that blatant, shot down against Under aa"
+	},
+	["8"] = {
+		"dtbkami",
+		"3574858149",
+		"Was kinda ass at first, then started hitting only 3 taps. Aim went 'bad' again after i enabled antilock but IDK. (He was injected)"
+	},
+	["9"] = {
+		"nolimitvux",
+		"3531032819",
+		"Honestly not sure, he hit the same spot 3 shots in a row tho"
+	},
+	["10"] = {
+		"coco_1473",
+		"1619928978",
+		"Full blatant exploitor, prob uses lock while 'legit' aswell"
+	},
+	["11"] = {
+		"2CYR",
+		"1174748801",
+		"Prob locking, or maybe hes just got the best aim EVER"
+	},
+	["12"] = {
+		"biteyzz",
+		"2932662195",
+		"Every1 think he legit. He was 3 tapping every1 but couldnt hit me when i was using AA"
+	},
+	["13"] = {
+		"JimWeiss45",
+		"315895628",
+		"Aim was a little blatant, he was floating around with half his limbs gone..."
+	},
+	["14"] = {
+		"brayxfy",
+		"2000958197",
+		"Couldnt hit antilock, sus aim"
+	},
+	["15"] = {
+		"qqHi_CsBhopper",
+		"3329437686",
+		"Couldnt hit antilock, sus aim"
+	},
+	["16"] = {
+		"freddysammy1234",
+		"84741109",
+		"MAYBE, is in a vault server, owns some gamepasses for locks, sets, ect"
+	},
+	["17"] = {
+		"vinnyitalt",
+		"2506614053",
+		"posted a vid of him locking"
+	},
+	["18"] = {
+		"Zysz1623",
+		"3180605152",
+		"admitted+antilocked on him"
+	},
+	["19"] = {
+		"TripleBullett",
+		"2805163118",
+		"Hard ducked me while i was using anti + started cframe speeding around"
+	},
+	["20"] = {
+		"darlingraya",
+		"3510402311",
+		"Blatant"
+	},
+	["22"] = {
+		"plsnobaniuseaimbottt",
+		"3714287761",
+		"sus aim, accidentally airshot som1 while 1v1ing"
+	},
+	["23"] = {
+		"hauntwizzrizz",
+		"4064027929",
+		"caught with aim viewer"
+	},
+	["24"] = {
+		"BornWithBear",
+		"285002123",
+		"caught with aim viewer, went blatant after"
+	}
+
+}
+
+ fisxuser = {
+1691299369,
+81245498,
+1792039007,
+1145324307 ,
+1809531656 ,
+367261765 ,
+1997700137 ,
+2263714442 ,
+2323163174 ,
+2467495464 ,
+442102780 ,
+1918997375 ,
+468977556 ,
+803726783 ,
+2312491062 ,
+350507609 ,
+2514042502 ,
+1685631236 ,
+2600937311 ,
+2328626965 ,
+2373870859 ,
+2789246593 ,
+2407944572,
+2047974607
+}
+
+local function Notify(title, des)
+	local CoreGui = game:GetService("StarterGui")
+	CoreGui:SetCore("SendNotification", {
+		Title = title;
+		Text = des;
+		Duration = 5;
+	})
+	if des ~= "YEES OK" then
+		print("||||||||||||||||||||||||||||||||||||||||||||||||||||")
+		print(title.." is (prob) a locker:"..des)
+	end
+end
+local Players = game:GetService("Players")
+local locks = 0
+for i,v in pairs(Players:GetChildren()) do
+	for j, k in pairs( fisxuser) do
+		if v.UserId == k then
+			locks = locks+1
+			local CoreGui = game:GetService("StarterGui")
+			CoreGui:SetCore("SendNotification", {
+				Title = "Old 15x user (in game)";
+				Text = v.Name;
+				Duration = 5;
+			})
+		end
+	end
+	for j, k in pairs(lockers) do
+		if v.UserId == k[2] or v.Name == k[1] then
+			locks = locks+1
+			Notify(k[1], k[3])
+		end
+	end
+end
+Notify(locks.." Lockers found!", "YEES OK")
+ 
+Players.PlayerAdded:Connect(function(player)
+	for j, k in pairs(lockers) do
+		if player.UserId == k[2] or player.Name == k[1] then
+			Notify(k[1].." Just joined!", k[3])
+		end
+	end
+	for j, k in pairs( fisxuser) do
+		if player.UserId == k then
+			local CoreGui = game:GetService("StarterGui")
+			CoreGui:SetCore("SendNotification", {
+				Title = "Old 15x user (joined)";
+				Text = v.Name;
+				Duration = 5;
+			})
+		end
+	end
+end)
+Players.PlayerRemoving:Connect(function(player)
+	for j, k in pairs(lockers) do
+		if player.UserId == k[2] or player.Name == k[1] then
+			Notify(k[1].." Just left!", "BYEE")
+		end
+	end
+	for j, k in pairs( fisxuser) do
+		if v.UserId == k then
+			local CoreGui = game:GetService("StarterGui")
+			CoreGui:SetCore("SendNotification", {
+				Title = "Old 15x user (Left)";
+				Text = v.Name;
+				Duration = 5;
+			})
+		end
+	end
+end)
