@@ -119,15 +119,20 @@ local lockers = {
 		"2240243711",
 		"caught with aim viewer, bro said his roshade glitched"
 	},
-		["26"] = {
+	["26"] = {
 		"XXkittybel21",
 		"883153589",
 		"blatant exploiting, prolly lock/some type of silent"
 	},
-		["27"] = {
+	["27"] = {
 		"zsulivivibff",
 		"3459918182",
 		"fake macro ( + anims??), locking prob as well"
+	},
+	["28"] = {
+		"bankai_brokeyou",
+		"3959923037",
+		"blatant"
 	}
 
 
