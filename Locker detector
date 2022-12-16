@@ -133,8 +133,12 @@ local lockers = {
 		"bankai_brokeyou",
 		"3959923037",
 		"blatant"
-	}
-
+	},
+	["29"] = {
+		"zemusis",
+		"3979089455",
+		"aim viewer"
+	},
 
 }
 
