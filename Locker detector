@@ -181,7 +181,6 @@ local lockers = {
 2373870859 ,
 2789246593 ,
 2407944572,
-2047974607
 }
 
 local function Notify(title, des)
