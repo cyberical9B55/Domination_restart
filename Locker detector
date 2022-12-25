@@ -148,6 +148,11 @@ local lockers = {
 		"ghost_boy333646",
 		"1404053491",
 		"aim viewer + blatant"
+	},
+	["32"] = {
+		"ImpactedSkulls",
+		"1782245173",
+		"blatant + godded"
 	}
 
 }
